@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <title>𝕱𝖆𝖇𝖎 𝕾𝖙𝖔𝖗𝖊 | 𝚃𝚒𝚎𝚗𝚍𝚊 𝚎𝚗 𝚕í𝚗𝚎𝚊 𝟸𝟶𝟸𝟺</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titlx">🄵🄰🄱🄸 🅂🅃🄾🅁🄴</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="#">ɪɴɪᴄɪᴏ</a></li>
+                <li><a href="#productox">ᴘʀᴏᴅᴜᴄᴛᴏꜱ</a></li>
+                <li><a href="#carritox">ᴄᴀʀʀɪᴛᴏ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="productos" id="productox">
+        <div class="producto">
+            <img src="img/poedagarFino.png" alt="Producto 1">
+            <h2>POEDAGAR-reloj de lujo para hombre</h2>
+            <p>S/119.99</p>
+            <button onclick="agregarAlCarrito(1)" id="1" value="119.99">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/olevsFino.png" alt="Producto 2">
+            <h2>OLEVS-Reloj de alta calidad</h2>
+            <p>S/149.99</p>
+            <button onclick="agregarAlCarrito(2)" id="2" value="149.99">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/gafasOficial.png" alt="Producto 3">
+            <h2>Gafas con bloqueo de luz azul para hombre</h2>
+            <p>S/79.99</p>
+            <button onclick="agregarAlCarrito(3)" id="3" value="79.99">Agregar al carrito</button>
+        </div>
+    </section>
+    <hr>
+    <section class="carrito" id="carritox">
+        <h2>Carrito de compras</h2>
+        <ul id="carritoLista"></ul>
+        <p>Total: <span id="total"></span></p>
+        <button onclick="realizarCompra()">Realizar compra</button>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>𝕋𝕙𝕖𝕫𝕖𝕣𝕠 &copy; 𝟐𝟎𝟐4 𝐓𝐨𝐝𝐨𝐬 𝐥𝐨𝐬 𝐝𝐞𝐫𝐞𝐜𝐡𝐨𝐬 𝐫𝐞𝐬𝐞𝐫𝐯𝐚𝐝𝐨𝐬</p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
