@@ -47,6 +47,54 @@
         <ul id="carritoLista"></ul>
         <p>Total: <span id="total"></span></p>
         <button onclick="realizarCompra()">Realizar compra</button>
+        <div id="formulario" class="formulario">
+            <h2>Formulario de compra</h2>
+            <form id="form" name="sentMessage" novalidate="novalidate">
+                <label for="nombre">Nombre:</label>
+                <input type="text" required name="from_name" id="from_name" type="text" placeholder="Nombre">
+
+                <label for="dni">DNI:</label>
+                <input type="number" name="message" id="message" placeholder="DNI" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="message" id="message" placeholder="Telefono" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="message" id="message" placeholder="¡Solo Tingo Maria!" required>
+                <input id="to_name" name="to_name" type="hidden" value="Thezero" />
+
+                <button type="submit" id="button" value="Send Email">Comprar</button>
+            </form>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+                emailjs.init('user_zByTB2OyK8sWofFePBZdB')
+                var subject = "FabiStore"
+                const phone = document.getElementById('phone');
+                const btn = document.getElementById('button');
+
+                document.getElementById('form')
+                    .addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        btn.value = 'Enviando...';
+
+                        const serviceID = 'default_service';
+                        const templateID = 'gmail';
+
+                        emailjs.sendForm(serviceID, templateID, this)
+                            .then(() => {
+                                btn.value = 'Send Email';
+                                alert('En Breve Le Atendemos Al Whatsapp!');
+                            }, (err) => {
+                                btn.value = 'Send Email';
+                                alert(JSON.stringify(err));
+                            });
+                    });
+
+
+            </script>
+        </div>
     </section>
 
     <footer>

@@ -51,7 +51,7 @@ function mostrarCarrito() {
     // Mostrar los productos en el carrito
     carrito.forEach(producto => {
         let li = document.createElement("li");
-        li.textContent = producto.nombre + " - $" + producto.precio.toFixed(2);
+        li.textContent = producto.nombre + " - S/" + producto.precio.toFixed(2);
         carritoLista.appendChild(li);
     });
 
@@ -61,6 +61,8 @@ function mostrarCarrito() {
 
 // Función para realizar la compra
 function realizarCompra() {
+    var formulario = document.getElementById("formulario");
+    formulario.style.display = "block";
     // Aquí puedes implementar la lógica para procesar la compra, como enviar los datos a un servidor o mostrar un mensaje de confirmación
     // Por simplicidad, aquí se muestra un mensaje de alerta
     alert("¡Compra realizada! Total: S/" + total.toFixed(2));
