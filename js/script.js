@@ -65,7 +65,37 @@ function realizarCompra() {
     formulario.style.display = "block";
     // Aquí puedes implementar la lógica para procesar la compra, como enviar los datos a un servidor o mostrar un mensaje de confirmación
     // Por simplicidad, aquí se muestra un mensaje de alerta
-    alert("¡Compra realizada! Total: S/" + total.toFixed(2));
+    alert("¡Compra En Proceso! Total: S/" + total.toFixed(2));
+    emailjs.init('user_zByTB2OyK8sWofFePBZdB')
+    var subject = "FabiStore"
+    const phone = document.getElementById('phone');
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'gmail';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('En Breve Le Atendemos Al Whatsapp!');
+                    //alert("¡Compra realizada! Total: S/" + total.toFixed(2));
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1000);
+
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+
+    //alert("¡Compra realizada! Total: S/" + total.toFixed(2));
 
     // Reiniciar el carrito
     carrito = [];
@@ -77,3 +107,7 @@ function realizarCompra() {
 
 // Mostrar el carrito inicialmente
 mostrarCarrito();
+
+
+
+
