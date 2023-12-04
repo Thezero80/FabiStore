@@ -12,9 +12,9 @@ function agregarAlCarrito(id) {
     if (id === 1) {
         producto.precio = 119.99;
     } else if (id === 2) {
-        producto.precio = 159.99;
+        producto.precio = 149.99;
     } else if (id === 3) {
-        producto.precio = 89.99;
+        producto.precio = 79.99;
     }
 
     // Agregar el producto al carrito
