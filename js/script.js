@@ -67,6 +67,7 @@ function realizarCompra() {
     // Por simplicidad, aquí se muestra un mensaje de alerta
     alert("¡Compra En Proceso! Total: S/" + total.toFixed(2));
     emailjs.init('user_zByTB2OyK8sWofFePBZdB')
+    //emailjs.init('qR7qvCzVGTAEwqYNj')
     var subject = "FabiStore"
     const phone = document.getElementById('phone');
     const btn = document.getElementById('button');

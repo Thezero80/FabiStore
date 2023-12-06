@@ -34,17 +34,13 @@ a {
     transition: color 0.3s, transform 0.3s;
 }
 
-a:hover {
-    color: red;
-    transform: translateY(-65px);
-}
-
 
 /* Estilos de productos -5 */
 .productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 17vh;
 }
 
 .producto {
@@ -118,6 +114,7 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    height: 60px;
 }
 
 .container {
@@ -168,6 +165,68 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
-.pricex{
+
+.pricex {
     text-decoration-line: line-through;
+}
+
+.secti {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+}
+
+.login-button {
+    display: none;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .login-button {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.formix {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formix input[type="number"],
+.formix input[type="password"] {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.formix button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.formix button[type="submit"]:hover{
+    background-color: #0056b3;
+}
+.seg{
+    margin-top: 20vh;
 }
