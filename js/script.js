@@ -66,7 +66,7 @@ function realizarCompra() {
     // Aquí puedes implementar la lógica para procesar la compra, como enviar los datos a un servidor o mostrar un mensaje de confirmación
     // Por simplicidad, aquí se muestra un mensaje de alerta
     alert("¡Compra En Proceso! Total: S/" + total.toFixed(2));
-    emailjs.init('user_zByTB2OyK8sWofFePBZdB')
+    emailjs.init('bgN-e7F2EjGyDqEfz')
     //emailjs.init('qR7qvCzVGTAEwqYNj')
     var subject = "FabiStore"
     const phone = document.getElementById('phone');
@@ -78,8 +78,8 @@ function realizarCompra() {
 
             btn.value = 'Enviando...';
 
-            const serviceID = 'default_service';
-            const templateID = 'gmail';
+            const serviceID = 'service_tzzmwxg';
+                const templateID = 'template_tn3efha';
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
